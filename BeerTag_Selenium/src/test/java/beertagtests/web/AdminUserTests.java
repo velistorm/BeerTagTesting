@@ -13,7 +13,6 @@ import testframework.utils.AssertionUtils;
 
 @Epic("Admin User Tests Tests")
 public class AdminUserTests extends BeerTagBaseWebTest {
-
     @Test
     @Feature("Admin User Can Log In")
     @Description("Tests the functionality of logging in an admin user")
@@ -117,8 +116,10 @@ public class AdminUserTests extends BeerTagBaseWebTest {
         homePage.navigate();
         homePage.clickLogIn();
         signInPage.signIn(TestData.ADMIN_USERNAME.getValue(), TestData.ADMIN_PASSWORD.getValue());
+        createABeerPage.clickCreateABeerLink();
+        createABeerPage.clickNameABeerLink(TestData.ADMIN_BEER_NAME.getValue(), "10", "Red Ale");
         homePage.clickBrowseAllBeersLink();
-        browsePage.clickPost("Beer");
+        browsePage.clickPost("Admin");
         browsePage.updatePost("Admin Updated Beer", "4", "Stout");
         AssertionUtils.assertElementVisible(DriverManager.getDriver(), "xpath", BrowsePage.getBrowseBackground());
     }
@@ -129,6 +130,8 @@ public class AdminUserTests extends BeerTagBaseWebTest {
         homePage.navigate();
         homePage.clickLogIn();
         signInPage.signIn(TestData.ADMIN_USERNAME.getValue(), TestData.ADMIN_PASSWORD.getValue());
+        createABeerPage.clickCreateABeerLink();
+        createABeerPage.clickNameABeerLink(TestData.ADMIN_BEER_NAME.getValue(), "10", "Red Ale");
         homePage.clickBrowseAllBeersLink();
         browsePage.clickPost("Beer");
         browsePage.deletePost();

@@ -9,11 +9,6 @@ import testframework.PropertiesManager;
 import testframework.core.BaseWebTest;
 
 public class BeerTagBaseWebTest extends BaseWebTest {
-
-
-
-    //NE ZABRAVQI NOVITE KLASOVE DA SE INSTANCIRAT!!!!!!!!!!!!!!!!
-
     protected HomePage homePage;
     protected RegisterPage registerPage;
     protected LogInPage signInPage;
@@ -29,12 +24,10 @@ public class BeerTagBaseWebTest extends BaseWebTest {
         createABeerPage = new CreateABeerPage();
         driver().get(PropertiesManager.getConfigProperties().getProperty("beertagBaseUrl"));
     }
-
     @AfterEach
     public void afterTest() {
         driver().close();
     }
-
     @AfterAll
     public static void afterAll() {
         DriverManager.quitDriver();

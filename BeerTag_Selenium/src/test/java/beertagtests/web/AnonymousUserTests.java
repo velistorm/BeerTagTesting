@@ -2,9 +2,7 @@ package beertagtests.web;
 
 import beertag.pages.BrowsePage;
 import beertag.pages.HomePage;
-import beertag.pages.LogInPage;
 import beertagtests.core.BeerTagBaseWebTest;
-import beertagtests.enums.TestData;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import jdk.jfr.Description;
@@ -19,7 +17,6 @@ public class AnonymousUserTests extends BeerTagBaseWebTest {
     @Description("Tests the functionality of an anonymous user browsing public posts")
     public void anonymousUserCanBrowsePosts() throws InterruptedException {
         homePage.navigate();
-        //You can choose which post you want to open by entering its number below (the element has to exist)
         homePage.clickBeerInHomePage("10");
         AssertionUtils.assertElementVisible(DriverManager.getDriver(), "xpath", HomePage.getHomePageBackground());
     }

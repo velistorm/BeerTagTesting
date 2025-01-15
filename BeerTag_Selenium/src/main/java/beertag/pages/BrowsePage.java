@@ -22,7 +22,6 @@ public class BrowsePage extends BaseBeerTagPage{
     private final By styleABeerUpdateField = By.id("styleId");
     private final By saveButton = By.xpath("//input[@value='Save']");
     private final By deleteButton = By.xpath("//a[normalize-space()='Delete']");
-
     private final By nameSort = By.id("name");
     private final By minAbvSort = By.id("minAbv");
     private final By maxAbvSort = By.id("maxAbv");
@@ -31,7 +30,6 @@ public class BrowsePage extends BaseBeerTagPage{
     private final By sortOrderSort = By.id("sortOrder");
     private final By searchSort = By.xpath("//input[@value='Search']");
     private static final By ailqkLink = By.xpath("//h5[normalize-space()='Ailyak']");
-
 
     public void clickFirstPost() {
         driverWait().until(ExpectedConditions.visibilityOfElementLocated(firstPost)).click();
@@ -90,7 +88,6 @@ public class BrowsePage extends BaseBeerTagPage{
 
         driverWait().until(ExpectedConditions.visibilityOfElementLocated(searchSort)).click();
     }
-
     public static By getAddAndRemoveToWishList(){
         return addAndRemoveToWishList;
     }

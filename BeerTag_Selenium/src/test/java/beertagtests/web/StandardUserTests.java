@@ -9,7 +9,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import testframework.DriverManager;
 import testframework.utils.AssertionUtils;
 
@@ -18,7 +17,6 @@ public class StandardUserTests extends BeerTagBaseWebTest {
     @Test
     @Feature("Standard User Registration")
     @Description("Tests the functionality of creating a new standard user.")
-            //"Verifies that a user can create a post and it appears in the feed.")
     public void registerStandardUser(){
         homePage.navigate();
         homePage.clickRegister();
@@ -44,7 +42,6 @@ public class StandardUserTests extends BeerTagBaseWebTest {
         homePage.navigate();
         homePage.clickLogIn();
         signInPage.signIn(TestData.USERNAME.getValue(), TestData.USER_PASSWORD.getValue());
-        //You can choose which post you want to open by entering its number below (the element has to exist)
         homePage.clickBeerInHomePage("10");
         AssertionUtils.assertElementVisible(DriverManager.getDriver(), "xpath", HomePage.getHomePageBackground());
     }
@@ -113,8 +110,8 @@ public class StandardUserTests extends BeerTagBaseWebTest {
         createABeerPage.clickCreateABeerLink();
         createABeerPage.clickNameABeerLink(TestData.STD_BEER_NAME.getValue(), "10", "Red Ale");
         homePage.clickBrowseAllBeersLink();
-        browsePage.clickPost("Beer");
-        browsePage.updatePost("Beer Updated", "4", "Stout");
+        browsePage.clickPost("Standard");
+        browsePage.updatePost("STDBeer Updated", "4", "Stout");
         AssertionUtils.assertElementVisible(DriverManager.getDriver(), "xpath", BrowsePage.getBrowseBackground());
     }
     @Test
@@ -127,7 +124,7 @@ public class StandardUserTests extends BeerTagBaseWebTest {
         createABeerPage.clickCreateABeerLink();
         createABeerPage.clickNameABeerLink(TestData.STD_BEER_NAME.getValue(), "10", "Red Ale");
         homePage.clickBrowseAllBeersLink();
-        browsePage.clickPost("Beer");
+        browsePage.clickPost("Standard");
         browsePage.deletePost();
         AssertionUtils.assertElementVisible(DriverManager.getDriver(), "xpath", BrowsePage.getBrowseBackground());
     }

@@ -13,7 +13,7 @@ public enum TestData {
     EMAIL(generateEmail()),
     FIRST_NAME(getRandomString(5)),
     LAST_NAME(getRandomString(5)),
-    STD_BEER_NAME("Beer " + getRandomString(4)),
+    STD_BEER_NAME("Standard " + getRandomString(4)),
     ADMIN_BEER_NAME("Admin " + getRandomString(4));
     //UPDATE_EMAIL(generateEmail()),
     //UPDATE_BIRTHDAY("11111990"),
