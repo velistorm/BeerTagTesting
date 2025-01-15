@@ -1,7 +1,6 @@
 package Utils;
 
 public class Endpoints {
-
     //Beers
     private static final String BEER_POSTS_ENDPOINT = "/api/beers";
 
@@ -11,7 +10,6 @@ public class Endpoints {
     public static String getBeerPostsWithIdEndpoint(String id){
         return BEER_POSTS_ENDPOINT + "/" + id;
     }
-
     //Users
     private static final String USERS_ENDPOINT = "/api/users";
     public static String getUsersEndpoint(){
