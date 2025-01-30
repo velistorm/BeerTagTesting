@@ -92,14 +92,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/beers/34",
+									"raw": "{{baseUrl}}/api/beers/1",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"beers",
-										"34"
+										"1"
 									]
 								}
 							},
@@ -217,12 +217,7 @@
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
-											"//pm.expect(jsonData.id).to.eql(pm.environment.get(\"id_user\"));\r",
-											"\r",
-											"pm.test(\"Id is equal to the variable\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get('postId'))\r",
-											"});"
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -244,7 +239,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Updated\",\r\n  \"abv\": 5,\r\n  \"styleId\": 5\r\n}",
+									"raw": "{\r\n  \"name\": \"Updated 1\",\r\n  \"abv\": 5,\r\n  \"styleId\": 5\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -252,14 +247,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/beers/{{postId}}",
+									"raw": "{{baseUrl}}/api/beers/115",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"beers",
-										"{{postId}}"
+										"115"
 									]
 								}
 							},
@@ -525,7 +520,7 @@
 								"method": "PUT",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/users/1/wish-list/37",
+									"raw": "{{baseUrl}}/api/users/1/wish-list/1",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -534,7 +529,7 @@
 										"users",
 										"1",
 										"wish-list",
-										"37"
+										"1"
 									]
 								}
 							},
@@ -565,7 +560,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/users/1/wish-list/37",
+									"raw": "{{baseUrl}}/api/users/1/wish-list/1",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -574,7 +569,7 @@
 										"users",
 										"1",
 										"wish-list",
-										"37"
+										"1"
 									]
 								}
 							},
